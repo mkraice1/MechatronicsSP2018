@@ -1,3 +1,15 @@
+commit f91fcd20aa05b9ec9dd25b46cacd549efda84afa
+Author: Yichuan Tang <tangyichuan18@gmail.com>
+Date:   Wed Feb 7 14:15:43 2018 -0500
+
+    added Ping_Scheme
+
+commit 4673869457815f2367b3d370c96792a4fc5133f2
+Author: Yichuan Tang <tangyichuan18@gmail.com>
+Date:   Wed Feb 7 14:10:02 2018 -0500
+
+    add test
+
 commit 678c422ad179a452f1c84fd1ea8ae594bcf9a8e0
 Author: Yichuan Tang <tangyichuan18@gmail.com>
 Date:   Wed Feb 7 14:00:38 2018 -0500
