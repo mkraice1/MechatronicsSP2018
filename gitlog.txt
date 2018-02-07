@@ -1,3 +1,9 @@
+commit 35bfdd18a8d4f9d5e075fafad66ee22e33095610
+Author: Yichuan Tang <tangyichuan18@gmail.com>
+Date:   Wed Feb 7 14:19:33 2018 -0500
+
+    updates log
+
 commit f91fcd20aa05b9ec9dd25b46cacd549efda84afa
 Author: Yichuan Tang <tangyichuan18@gmail.com>
 Date:   Wed Feb 7 14:15:43 2018 -0500
