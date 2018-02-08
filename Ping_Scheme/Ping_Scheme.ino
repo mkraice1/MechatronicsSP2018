@@ -1,4 +1,6 @@
-// Connect Ping))) signal pin to Arduino digital 8
+//Ping sensor
+//Connect Ping signal pin to Arduino digital 8
+//Mechatronics 530.421 Lab2
 int signal=8;
 int distance;
 unsigned long pulseduration=0;
@@ -35,7 +37,7 @@ void loop()
  // divide the pulse length by half
  pulseduration=pulseduration/2; 
  
- // now convert to centimetres. We're metric here people...
+ // now convert to centimetres.
  distance = int(pulseduration/29);
  
  // Display on serial monitor
