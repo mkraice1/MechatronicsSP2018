@@ -33,13 +33,11 @@ void loop()
 {
  // get the raw measurement data from Ping)))
  measureDistance();
- 
- // divide the pulse length by half
- pulseduration=pulseduration/2; 
- 
- // now convert to centimetres.
- distance = int(pulseduration/29);
- 
+ //************************//
+ // FILL IN YOUR CODES HERE
+ distance = ;
+ // END OF YOUR CODES
+ //************************//
  // Display on serial monitor
  Serial.print("Distance - ");
  Serial.print(distance);
