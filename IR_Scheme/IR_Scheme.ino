@@ -1,9 +1,10 @@
-//En 530.421
-
-#define sensor A0 // Sharp IR GP2Y0A41SK0F (4-30cm, analog)
+//IR sensor
+//Connect sensor signal pin to analog pin A0 on Uno
+//Mechatronics 530.421 Lab2
+#define sensor A0 // Sharp IR (4-30cm, analog)
 
 void setup() {
-  Serial.begin(9600); // start the serial port
+  Serial.begin(9600);
 }
 
 void loop() {
