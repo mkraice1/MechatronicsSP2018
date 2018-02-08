@@ -1,6 +1,7 @@
 //DC Motor and Encoder: measure speed
 //Connect Encoder to Pins encoder0PinA, encoder0PinB, and +5V.
-//Mechatronics 520.340 Lab2
+//Mechatronics 530.421 Lab2
+
 #define encoder0PinA  2
 #define encoder0PinB  3
 volatile long encoder0Pos=0;
