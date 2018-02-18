@@ -6,7 +6,9 @@ int encoder0PinA = 9;
 int encoder0PinB = 10;
 int encoder0Pos = 0;
 int encoder0PinALast = LOW;
-int n = LOW;
+int encoder0PinBLast = LOW;
+int n1 = LOW;
+int n2 = LOW;
 
 void setup() {
   pinMode (encoder0PinA, INPUT);
@@ -14,15 +16,43 @@ void setup() {
   Serial.begin (9600);
 }
 
+//Increase or decrease pos depends on user's definition of positive pos.
 void loop() {
-  n = digitalRead(encoder0PinA);
-  if ((encoder0PinALast == LOW) && (n == HIGH)) {
-    if (digitalRead(encoder0PinB) == LOW) {
+  n1 = digitalRead(encoder0PinA);
+  n2 = digitalRead(encoder0PinB);
+//Using rising edge of the channel A
+  if ((encoder0PinALast == LOW) && (n1 == HIGH)) {
+    if (n2 == LOW) {
       encoder0Pos--;
     } else {
       encoder0Pos++;
     }
-    Serial.print ("encoder");Serial.println (encoder0Pos);Serial.println ("");
   }
-  encoder0PinALast = n;
+//Using falling edge of the channel A
+  else if ((encoder0PinALast == HIGH) && (n1 == LOW)) {
+    if (n2 == HIGH) {
+      encoder0Pos--;
+    } else {
+      encoder0Pos++;
+    }
+  }
+//Using rising edge of the channel B
+  else if ((encoder0PinBLast == LOW) && (n2 == HIGH)) {
+    if (n1 == HIGH) {
+      encoder0Pos--;
+    } else {
+      encoder0Pos++;
+    }
+  } 
+//Using falling edge of the channel B
+  else if ((encoder0PinBLast == HIGH) && (n2 == LOW)) {
+    if (n1 == LOW) {
+      encoder0Pos--;
+    } else {
+      encoder0Pos++;
+    }
+  } 
+  encoder0PinALast = n1;
+  encoder0PinBLast = n2;
+  Serial.print ("encoder");Serial.println (encoder0Pos);Serial.println ("");
 }
