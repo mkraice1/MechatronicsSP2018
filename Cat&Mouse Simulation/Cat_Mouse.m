@@ -66,7 +66,7 @@ for i = 1:100
     sum_diff = sum_diff + norm(diff_vector_prev);
     
     % display cat's updates state
-    message1 = sprintf("Cat's state: [%d, %d]", Pcat_xy(1), Pcat_xy(2));
+    message1 = sprintf('Cat state: [%d, %d]', Pcat_xy(1), Pcat_xy(2));
     disp(message1);
     
     % update mouses's motion
